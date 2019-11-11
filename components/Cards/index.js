@@ -18,14 +18,15 @@
 //
 // Create a card for each of the articles and add the card to the DOM.
 
-//const firstOne = document.querySelector(".topics");
 const artMaker = document.querySelector("cards-container");
 axios.get("https://lambda-times-backend.herokuapp.com/articles")
     .then( response => {
         console.log(response);
-       // response.data.topics.forEach( topic => {
-         //   firstOne.appendChild(tabThing(topic))
-     //   })
+        for(const articleTopic in response.data.articles) {
+          response.data.articles[articleTopic].forEach(article => {
+            
+          })  
+        }
     })
     .catch( err => {
         console.log(err);
@@ -37,17 +38,21 @@ axios.get("https://lambda-times-backend.herokuapp.com/articles")
         const oneAuthor = document.createElement("div");
         const oneImg = document.createElement("img");
         const oneName = document.createElement("span");
+
+        oneCard.classList.add("card");
+        oneHeadline.classList.add("headline");
+        oneAuthor.classList.add("author");
+        oneImg.classList.add("img-container");
+
+        
+       
     }
 
-    oneCard.classList.add("card");
-    oneHeadline.classList.add("headline");
-    oneAuthor.classList.add("author");
-    oneImg.classList.add("img-container");
+ 
 
 
   //  tab.classList.add("tab");
 
    // tab.textContent = tabTitle;
 
-   // return tab;
-}
+   // return tab;}

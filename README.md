@@ -31,11 +31,11 @@ Edit this document to include your answers after each question. Make sure to lea
 1. What is the DOM?
 The Document Object Model
 2. What is an event?
-
+An event is interactions that users have with a site.
 3. What is an event listener?
-
+An event listener is when we choose specific elements to listen to specific events and fire a callback.
 4. Why would we convert a NodeList into an Array?
-
+We would do this so that we can use .from
 5. What is a component?
 A compenent is reusable code.
 ### Git Set up
